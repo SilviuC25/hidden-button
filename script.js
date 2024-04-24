@@ -1,23 +1,24 @@
-let startButton = document.getElementById("btn-start");
-let inputGroup = document.getElementById("input-group");
-let buttonsContainer = document.getElementById("buttons-container");
+let startButton = document.getElementById('btn-start');
+let inputGroup = document.getElementById('input-group');
+let buttonsContainer = document.getElementById('buttons-container');
 let endGameText = document.getElementById('text-end');
 
 function createInput() {
-    inputGroup.classList.remove("visually-hidden");
-    startButton.classList.add("visually-hidden");
+    inputGroup.classList.remove('visually-hidden');
+    startButton.classList.add('visually-hidden');
 }
 
 function generateButtons() {
-    let input = document.getElementById("input-text").value;
+    let input = document.getElementById('input-text').value;
     let numberOfButtons = parseInt(input);
-    let alertText = document.getElementById("alert-text");
+    let alertText = document.getElementById('alert-text');
 
     if (isNaN(numberOfButtons)) {
-        alertText.classList.remove("visually-hidden");
+        alertText.classList.remove('visually-hidden');
         return;
-    } else if (!alertText.classList.contains("visually-hidden")) {
-        alertText.classList.add("visually-hidden");
+    }
+    if (!alertText.classList.contains('visually-hidden')) {
+        alertText.classList.add('visually-hidden');
     }
 
     buttonsContainer.innerHTML = ''; // the container must be emptied before generating the new buttons
